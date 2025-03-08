@@ -6,7 +6,7 @@ const api = axios.create({
   
   baseURL: process.env.NODE_ENV === 'development' 
            ? 'http://localhost:5000/api' 
-           : 'https://back-task-jyfk.onrender.com', 
+           : 'https://back-task-jyfk.onrender.com/api', 
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
