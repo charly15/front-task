@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 
 const api = axios.create({
   
-  baseURL: process.env.NODE_ENV === 'development' 
+  baseURL: process.env.NODE_ENV === 'production' 
            ? 'http://localhost:5000/api' 
            : 'https://back-task-jyfk.onrender.com/api', 
   timeout: 10000,
