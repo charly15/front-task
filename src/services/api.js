@@ -3,12 +3,16 @@ import { message } from 'antd';
 import dayjs from 'dayjs';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  
+  baseURL: process.env.NODE_ENV === 'development' 
+           ? 'http://localhost:5000/api' 
+           : 'https://back-task-jyfk.onrender.com', 
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
 
 
 export const registerUser = async (userData) => {
